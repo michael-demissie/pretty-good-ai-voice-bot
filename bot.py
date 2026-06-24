@@ -9,6 +9,9 @@ from elevenlabs.client import ElevenLabs
 from elevenlabs import VoiceSettings
 from utils import save_transcript, get_timestamp
 
+from dotenv import load_dotenv
+load_dotenv()
+
 # Initialize clients
 groq_client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 deepgram_client = DeepgramClient(os.getenv("DEEPGRAM_API_KEY"))
