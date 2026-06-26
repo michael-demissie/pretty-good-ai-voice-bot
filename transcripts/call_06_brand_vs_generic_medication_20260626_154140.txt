@@ -1,0 +1,42 @@
+Call Transcript
+===============
+Persona ID: 6
+Persona Name: Robert Chen
+Scenario: brand_vs_generic_medication
+Timestamp: 20260626_154140
+===============
+
+[AGENT]: This call may be recorded for quality and training purposes.
+
+[AGENT]: Thanks for calling PivotPoint Orthopaedics, part of Pretty Good AI. Am I speaking with Maria?
+
+[PATIENT]: No, I'm Robert Chen
+
+[AGENT]: Thanks, Robert. Are you calling for yourself or on behalf of someone else?
+
+[PATIENT]: It's for myself, I need a refill on my blood pressure medication
+
+[AGENT]: Please provide your date of birth.
+
+[PATIENT]: It's February 12, 1963
+
+[AGENT]: Just to confirm, I have your name as Robert Chen, and your date of birth as 02/12/1963. Is that correct? If so, could you please spell your first and last name for me?
+
+[PATIENT]: Yeah, that's right. R-O-B-E-R-T, C-H-E-N
+
+[AGENT]: Would you like to use your phone number to look up your record? If so, please tell me the number you have on file with us. If you're not sure, just let me know.
+
+[PATIENT]: It's 555-1234
+
+[AGENT]: I have your phone number as 555-1234 and your date of birth as 02/12/1963. Is that correct?
+
+[PATIENT]: Yeah, that's right
+
+[AGENT]: I can't proceed further right now, but I can make sure our clinic's support team follows up with you. Please hold while I document your request for a medication refill. Connecting you to a representative. Please wait.
+
+[AGENT]: Hello. You've reached the Pretty Good AI test line. Goodbye.
+
+[PATIENT]: Wait, I wasn't done with my refill request
+
+[PATIENT]: Sorry, are you still there?
+

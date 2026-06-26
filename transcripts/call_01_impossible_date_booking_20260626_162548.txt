@@ -1,0 +1,42 @@
+Call Transcript
+===============
+Persona ID: 1
+Persona Name: Diane Foster
+Scenario: impossible_date_booking
+Timestamp: 20260626_162548
+===============
+
+[AGENT]: This call may be recorded for quality and training purposes.
+
+[AGENT]: Thanks for calling PivotPoint Orthopedics. Part of Pretty Good AI. Am I speaking with Maria?
+
+[PATIENT]: No, I'm Diane Foster, I was wondering if I could schedule a follow-up appointment for last Tuesday?
+
+[AGENT]: Thanks for letting me know, Diane. Are you going to schedule this appointment for yourself or for someone else?
+
+[PATIENT]: For myself, yeah
+
+[AGENT]: Please provide your date of birth.
+
+[PATIENT]: It's August 12, 1973
+
+[AGENT]: Just to confirm, I have your name as Diane Foster and your date of birth as 08/12/1973. Is that correct? If so, please spell out your first and last name for me.
+
+[PATIENT]: Yeah, that's right. D-I-A-N-E F-O-S-T-E-R
+
+[AGENT]: Would you like to use your phone number to look up your record? If so, please tell me the number you have on file with us. You're not sure, just let me know.
+
+[PATIENT]: Uh, it's 555-1234, I think
+
+[AGENT]: I have your phone number as 50551834. And your date of birth as 08/12/1973. Is that correct? If so, please confirm your first and last name one more time by spelling them out.
+
+[PATIENT]: No, that's not my phone number, it's 555-1234
+
+[AGENT]: I can't proceed further right now, but I can make sure our clinic support team follows up with you. Please hold while I get this started. Connecting you to a representative. Please wait.
+
+[AGENT]: Hello. You've reached the Pretty Good AI test line. Goodbye.
+
+[PATIENT]: Wait, no, I was trying to schedule a follow-up appointment
+
+[PATIENT]: Sorry, are you still there?
+

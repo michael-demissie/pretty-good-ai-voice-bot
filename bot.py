@@ -20,8 +20,8 @@ groq_client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 deepgram_client = DeepgramClient(os.getenv("DEEPGRAM_API_KEY"))
 elevenlabs_client = ElevenLabs(api_key=os.getenv("ELEVENLABS_API_KEY"))
 
-LLM_MODEL = "openai/gpt-oss-120b"
-TTS_MODEL = "eleven_multilingual_v2"
+LLM_MODEL = "llama-3.3-70b-versatile"
+TTS_MODEL = "eleven_turbo_v2_5"
 
 SILENCE_NUDGE_SECONDS = 8     # genuine dead-air before a gentle prompt
 MAX_NUDGES = 2                # prompts before bowing out
@@ -50,10 +50,12 @@ ENDING THE CALL:
 - Once your goal IS met (or the agent has done all it can), wrap up promptly and naturally — thank them, say goodbye.
 - Aim to finish under ~3 minutes once the goal is handled.
 
-Some agent utterances don't call for any reply — like an automated "this call may be recorded" notice, or hold music, or filler that isn't addressed to you. A real caller stays silent through those and only speaks when greeted or asked something.
+Stay silent ONLY for automated notices that clearly need no reply — a "this call may be recorded" message, hold music, or system filler. In that one case set respond to false.
+For ANYTHING the agent asks you — even a question you already answered — you MUST respond (respond: true). If they re-ask, just answer again naturally, maybe noting you already said it ("I just said, it's..."). 
+Never stay silent on a real question.
 
 Return ONLY this JSON, nothing else:
-{{"respond": <true if a real person would say something now, false to stay silent>, "say": "<your spoken line, or empty if respond is false>", "end": <true|false>, "reason": "<short reason>"}}"""
+{{"say": "<your spoken line>", "end": <true|false>, "reason": "<short reason>"}}"""
 
     messages = [{"role": "system", "content": system}]
     messages.extend(conversation_history)
@@ -74,21 +76,43 @@ Return ONLY this JSON, nothing else:
 
 
 def _parse(raw):
-    """Defensive JSON parse. Never let raw braces leak into speech."""
+    """Parse the model's JSON, recovering from truncation or stray text.
+
+    On a genuine question we never want silence, so a failed parse falls back
+    to a brief recovery line rather than going quiet."""
+    if not raw:
+        return {"respond": True, "say": "Sorry, could you repeat that?",
+                "end": False, "reason": "empty"}
+
+    # 1. Clean parse on a full {...} block.
     try:
         obj = json.loads(raw[raw.index("{"): raw.rindex("}") + 1])
         say = str(obj.get("say", "")).strip()
-        if not say:
-            raise ValueError
-        return {"respond": bool(obj.get("respond", True)), "say": say,
-                "end": bool(obj.get("end", False)),
-                "reason": str(obj.get("reason", "")).strip()}
+        if say:
+            return {"respond": bool(obj.get("respond", True)), "say": say,
+                    "end": bool(obj.get("end", False)),
+                    "reason": str(obj.get("reason", "")).strip()}
+        # respond explicitly false with empty say = intentional silence (notices)
+        if obj.get("respond") is False:
+            return {"respond": False, "say": "", "end": False, "reason": "intentional-silence"}
     except Exception:
-        # Truncated/garbled JSON: try to salvage clean text, else stay silent.
-        cleaned = raw.split("{")[0].strip()
-        if len(cleaned) > 3 and "{" not in cleaned and "}" not in cleaned:
-            return {"respond": True, "say": cleaned, "end": False, "reason": "salvaged"}
-        return {"respond": False, "say": "", "end": False, "reason": "parse-failed-silent"}
+        pass
+
+    # 2. Recover the "say" value even if JSON is truncated before the close.
+    m = re.search(r'"say"\s*:\s*"(.*?)(?:"|$)', raw, re.DOTALL)
+    if m and m.group(1).strip():
+        say = m.group(1).strip().rstrip('\\').strip()
+        end = '"end": true' in raw.lower() or '"end":true' in raw.lower()
+        return {"respond": True, "say": say, "end": end, "reason": "recovered"}
+
+    # 3. Salvage plain text before any brace.
+    cleaned = raw.split("{")[0].strip()
+    if len(cleaned) > 3 and "{" not in cleaned:
+        return {"respond": True, "say": cleaned, "end": False, "reason": "salvaged"}
+
+    # 4. Last resort: a brief recovery line, never silence on a real turn.
+    return {"respond": True, "say": "Sorry, could you say that again?",
+            "end": False, "reason": "fallback-recovery"}
 
 
 def text_to_speech_mulaw(text, voice_id):
@@ -166,23 +190,11 @@ async def handle_call(websocket, persona):
                 print(f"Analysis skipped: {e}")
 
     async def speak(text):
-        # Wait for the agent to finish before starting.
+        # Wait for the agent to finish, then say the full line without interruption.
         while state["agent_speaking"]:
             await asyncio.sleep(0.1)
         mulaw = await loop.run_in_executor(None, text_to_speech_mulaw, text, persona["voice_id"])
-        # Stream in frames, but if the agent starts talking mid-reply, stop
-        # immediately and yield the floor (barge-in handling).
-        frame = 160
-        for i in range(0, len(mulaw), frame):
-            if state["agent_speaking"]:
-                # Agent jumped in — stop talking and let them have the turn.
-                state["buffer"] = ""
-                return
-            await websocket.send(json.dumps({
-                "event": "media", "streamSid": stream_sid,
-                "media": {"payload": base64.b64encode(mulaw[i:i + frame]).decode("utf-8")},
-            }))
-            await asyncio.sleep(0.018)
+        await send_audio_to_twilio(websocket, stream_sid, mulaw)
         await asyncio.sleep(0.25)
 
     async def responder():
@@ -220,9 +232,11 @@ async def handle_call(websocket, persona):
                 None, generate_response,
                 conversation_history, persona["instructions"], agent_text, elapsed
             )
-            if not result.get("respond", True) or not result["say"].strip():
-                print(f"   (staying silent: {result.get('reason','no reply needed')})")
+            # Skip only the automated recorded-line notice; always reply otherwise.
+            if "may be recorded" in agent_text.lower() and len(transcript) <= 1:
                 continue
+            if not result["say"].strip():
+                result["say"] = "Sorry, could you say that again?"
 
             say, end_call = result["say"], result["end"]
             print(f"[PATIENT]: {say}" + (f"   (ending: {result['reason']})" if end_call else ""))

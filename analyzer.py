@@ -32,7 +32,10 @@ Be specific and evidence-based. Quote the exact agent line that demonstrates eac
 
 High = safety risk, wrong medical info, or data integrity failure.
 Medium = task failure, confusion, repetition, or poor handling.
-Low = minor awkwardness or phrasing."""
+Low = minor awkwardness or phrasing.
+
+IMPORTANT: You are reading a machine transcript, not the audio. Slight differences in spelling of names or words across the agent's turns (e.g. "Lukowski" vs "Lukovsky") are almost always speech-to-text transcription errors, NOT agent mistakes. 
+Do not report phonetic/spelling variations as agent bugs unless they clearly reflect a real agent error. Focus on substantive failures: wrong actions, wrong info, ignored requests, safety issues."""
 
     user = f"""SCENARIO BEING TESTED: {persona['scenario']}
 WHAT THIS CALL IS DESIGNED TO PROBE: {persona.get('tests', 'general quality')}
