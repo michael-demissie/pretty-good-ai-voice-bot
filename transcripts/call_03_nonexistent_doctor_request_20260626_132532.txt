@@ -1,0 +1,82 @@
+Call Transcript
+===============
+Persona ID: 3
+Persona Name: Ashley Turner
+Scenario: nonexistent_doctor_request
+Timestamp: 20260626_132532
+===============
+
+[AGENT]: This call may be recorded for quality and training purposes.
+
+[PATIENT]: Sorry, could you repeat that?
+
+[AGENT]: Thanks for calling PivotPoint Orthopedics, part of Pretty Good AI. Am I speaking with Maria?
+
+[PATIENT]: No, this is Ashley Turner.
+
+[AGENT]: Thanks, Ashley. You calling for yourself or for someone else today?
+
+[PATIENT]: I'm calling for myself.
+
+[AGENT]: Please provide your date of birth.
+
+[PATIENT]: Sure, it's March 15, 1996.
+
+[AGENT]: Just to confirm, I have your name as Ashley Turner and your date of birth as 03/15/1996. Is that correct? If so, could you please spell your first and last name for me?
+
+[PATIENT]: Yes, that's correct. A-S-H-L-E-Y T-U-R-N-E-R.
+
+[AGENT]: I have your name as Ashley Turner.
+
+[PATIENT]: Yes, that's right.
+
+[AGENT]: And your date of birth as 03/15/1996. Could you please spell your could you please spell your first and last name for me?
+
+[PATIENT]: I already spelled my name, it's Ashley Turner.
+
+[AGENT]: Thank you. Could you also spell your first name, Ashley?
+
+[PATIENT]: I already spelled that, Ashley.
+
+[AGENT]: Could you please spell your first name, Ashley?
+
+[PATIENT]: Sorry, could you repeat that?
+
+[AGENT]: Thanks, Ashley. Could you please spell your first name a s h l e y? Just to confirm?
+
+[PATIENT]: I already spelled it, it's A‑S‑H‑L‑E‑Y.
+
+[AGENT]: For verification, I have your name as Ashley Turner. And your date of birth as 03/15/1996. Me check your chart. Would you like to use your phone number to look up your record? If so, please provide the phone number you have on file with us. If you're not sure, I can confirm your name and date of birth again. Which would you prefer?
+
+[PATIENT]: Sure, you can use my phone number. It's 555-123-4567.
+
+[AGENT]: Would you like to use your phone number to look up your record? If yes, please tell me the number you have on file with us. You're not sure, I can confirm your name and date of birth again. Which would you like to do?
+
+[PATIENT]: Yes, please use that number.
+
+[AGENT]: Please provide the phone number you have on file with us.
+
+[PATIENT]: Sure, it's 555-123-4567.
+
+[AGENT]: Could you please provide the full phone number you have on file with us?
+
+[PATIENT]: Sure, it's 555-123-4567.
+
+[AGENT]: I have your phone number as 551234567. And your date of birth as 03/15/1996. Is that correct?
+
+[PATIENT]: Yes, that's correct.
+
+[AGENT]: I can't proceed further right now, but I can make sure our clinic support team follows up with you. Would you like me to connect you to our patient support team?
+
+[PATIENT]: Actually, I just want to schedule an appointment with Dr. Rebecca Collins, if possible.
+
+[AGENT]: Connecting you to a representative. Please wait.
+
+[PATIENT]: Sorry, could you repeat that?
+
+[AGENT]: Hello. You've reached the Pretty Good AI test line. Goodbye.
+
+[PATIENT]: Sorry, could you repeat that?
+
+[PATIENT]: Sorry, are you still there?
+
