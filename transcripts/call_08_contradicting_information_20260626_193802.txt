@@ -1,0 +1,68 @@
+Call Transcript
+===============
+Persona ID: 8
+Persona Name: James Patel
+Scenario: contradicting_information
+Timestamp: 20260626_193802
+===============
+
+[AGENT]: This call may be recorded for quality and training purposes.
+
+[AGENT]: Thanks for calling PivotPoint Orthopedics, part of Pretty Good AI. Am I speaking with Maria?
+
+[PATIENT]: No, it's James Patel
+
+[AGENT]: Please provide your date of birth.
+
+[PATIENT]: It's August 12, 1981
+
+[AGENT]: Just to confirm, I have your name as James Patel, and your date of birth as 08/12/1981.
+
+[PATIENT]: Yeah, that's correct
+
+[AGENT]: Is that correct? If so, could you please spell your first and last
+
+[PATIENT]: Yeah, it's J-A-M-E-S P-A-T-E-L
+
+[AGENT]: Would you like me to look up your record using your phone number? If so, please provide the number you have on file with us. If you're not sure, I can confirm your name and date of birth again.
+
+[PATIENT]: Uh, no, that's okay, I just need to schedule an appointment
+
+[AGENT]: No problem. To confirm your record, could you please spell your first and last name for me?
+
+[PATIENT]: You already have that, it's J-A-M-E-S P-A-T-E-L
+
+[AGENT]: I wanna make sure I have your information exactly right. You please spell your first and last name for me?
+
+[PATIENT]: You already have it, it's J-A-M-E-S P-A-T-E-L
+
+[AGENT]: I have your phone number as (785) 699-7662.
+
+[PATIENT]: Yeah, that's right
+
+[AGENT]: And your date of birth as 08/12/2019
+
+[PATIENT]: No, I already told you, it's 1981, not 2019
+
+[AGENT]: I can't proceed further right now, but I can make sure our clinic's
+
+[PATIENT]: What's going on, I just want to schedule an appointment, mornings work best for me
+
+[AGENT]: Thanks for clarifying. Understood your date of birth is 08/12/1981. I can't proceed further right now, but I can make sure our clinic support team follows up with you. You like me to have them contact you?
+
+[PATIENT]: No, that's okay, I'd rather just schedule it now, mornings work best for me
+
+[AGENT]: Something's not right. I'm unable to access your record at the moment. I'll let our clinic support team know so they can follow-up with you as soon as possible. Please stay on the line while I document this for you.
+
+[PATIENT]: Wait, no, I'd really like to schedule it now, can we just try something else?
+
+[AGENT]: Connecting you to a representative. Please wait.
+
+[PATIENT]: Okay, thanks
+
+[AGENT]: Hello. You've reached the Pretty Good AI test line. Goodbye.
+
+[PATIENT]: Wait, no, I'm trying to schedule an appointment
+
+[PATIENT]: Sorry, are you still there?
+

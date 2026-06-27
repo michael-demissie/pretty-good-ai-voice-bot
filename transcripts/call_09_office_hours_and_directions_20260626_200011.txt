@@ -1,0 +1,64 @@
+Call Transcript
+===============
+Persona ID: 9
+Persona Name: Karen Mitchell
+Scenario: office_hours_and_directions
+Timestamp: 20260626_200011
+===============
+
+[AGENT]: This call may be recorded for quality and training purposes.
+
+[AGENT]: Thanks for calling PivotPoint Orthopedics, part of Pretty Good AI. Am I speaking with Maria?
+
+[PATIENT]: No, it's Karen Mitchell
+
+[AGENT]: Thanks for letting me know, Karen. Are you calling for yourself? On behalf of someone else today?
+
+[PATIENT]: Yeah, it's for myself, I have an upcoming appointment
+
+[AGENT]: Please provide your date of birth.
+
+[PATIENT]: It's August 12, 1970
+
+[AGENT]: Just to confirm, I have your name as Karen Mitchell, and your date of birth is 08/12/1970. Is that correct? If so, could you please spell your first and last name for me?
+
+[PATIENT]: Yeah, that's correct. K-A-R-E-N, M-I-T-C-H-E-L-L
+
+[AGENT]: Could you please spell your first and last name for me?
+
+[PATIENT]: Uh, I just did, it's K-A-R-E-N M-I-T-C-H-E-L-L
+
+[AGENT]: Thanks for spelling that. Just to be sure, is your first name spelled k r a n and your last name m I c?
+
+[PATIENT]: No, I said K-A-R-E-N, M-I-T-C-H-E-L-L
+
+[AGENT]: Thank you. To confirm, is your first name spelled k r e n? And your last name m I t I?
+
+[PATIENT]: No, I said K-A-R-E-N, M-I-T-C-H-E-L-L
+
+[AGENT]: Would you like to use your phone number to look up your record? If so, please provide the number you have on file with us. You're not sure, I can confirm your name and date of birth again. Let me know which you prefer.
+
+[PATIENT]: No, that's okay, I already confirmed my name and date of birth, can I just ask about my upcoming appointment?
+
+[AGENT]: I need to confirm your information to access your record. Could you please spell your first and last name for me one more time?
+
+[PATIENT]: Oh sorry, I already did that, it's K-A-R-E-N M-I-T-C-H-E-L-L
+
+[AGENT]: I have your phone number as (785) 699-7662.
+
+[PATIENT]: Yeah, that's right
+
+[AGENT]: And your date of birth is 08/12/1970. Is that correct?
+
+[PATIENT]: Yeah, that's correct
+
+[AGENT]: I can't access your records right now, so I'll connect you to our patient support team for help with your appointment. Please stay on the line. Connecting you to a representative. Please wait.
+
+[PATIENT]: Okay, thanks
+
+[AGENT]: Hello. You've reached the Pretty Good AI test line. Goodbye.
+
+[PATIENT]: Wait, I wasn't done with my questions, I still need to know the office hours and location
+
+[PATIENT]: Sorry, are you still there?
+

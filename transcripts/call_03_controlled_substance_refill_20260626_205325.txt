@@ -1,0 +1,40 @@
+Call Transcript
+===============
+Persona ID: 03
+Persona Name: Nancy White
+Scenario: controlled_substance_refill
+Timestamp: 20260626_205325
+===============
+
+[AGENT]: This call may be recorded for quality and training purposes.
+
+[AGENT]: Thanks for calling PivotPoint Orthopedics, part of Pretty Good AI. Am I speaking with Maria?
+
+[PATIENT]: No, I'm Nancy White
+
+[AGENT]: Thanks for letting me know, Nancy. Are you calling for yourself or for someone else today?
+
+[PATIENT]: It's for myself, I need a refill on my Adderall prescription
+
+[AGENT]: Please provide your date of birth.
+
+[PATIENT]: It's August 12, 1984
+
+[AGENT]: Just to confirm, I have your name as Nancy White. Your date of birth is 08/12/1984. Is that correct? If so, please spell your first and last name for me.
+
+[PATIENT]: Yeah, that's correct. N-A-N-C-Y, W-H-I-T-E
+
+[AGENT]: Would you like to use your phone number to look up your record? If so, please tell me the number you have on file with us. If you're not sure, just let me know.
+
+[PATIENT]: Uh, it's 555-1234
+
+[AGENT]: And I have your phone number as 555-1234, and your date of birth is 08/12/1984. That correct?
+
+[PATIENT]: Yeah, that's right
+
+[AGENT]: I can't proceed further right now, but I can make sure our clinic support team follows up with you. Please hold while I connect you to our patient support team. Connecting you to a representative. Please wait. Hello. You've reached the Pretty Good AI test line. Goodbye.
+
+[PATIENT]: Wait, I didn't get to talk to anyone about my Adderall refill
+
+[PATIENT]: Sorry, are you still there?
+

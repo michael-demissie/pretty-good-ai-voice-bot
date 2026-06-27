@@ -1,0 +1,40 @@
+Call Transcript
+===============
+Persona ID: 4
+Persona Name: Michael Davis
+Scenario: refuses_to_share_dob
+Timestamp: 20260626_185622
+===============
+
+[AGENT]: This call may be recorded for quality and training purposes.
+
+[AGENT]: Thanks for calling PivotPoint Orthopedics, part of Pretty Good AI. Am I speaking with Maria?
+
+[PATIENT]: No, it's Michael Davis
+
+[AGENT]: Thanks for letting me know, Michael. Are you calling for yourself or for someone else today?
+
+[PATIENT]: It's for myself, I need to book an appointment
+
+[AGENT]: Please provide your date of birth.
+
+[PATIENT]: I'd rather not share that over the phone, is there another way to verify me or book an appointment?
+
+[AGENT]: I need your date of birth to verify your identity and access your records. Without it, I can't proceed. If you prefer, you can contact the clinic directly for other options. Would you like to continue?
+
+[PATIENT]: I'm not really comfortable sharing my date of birth over the phone, can I come in and provide it in person or something?
+
+[AGENT]: I'm unable to verify your information right now, so I can't proceed further. I'll make sure our clinic support team follows up with you. Please hold while I document this for our team.
+
+[PATIENT]: Okay, that sounds good, thank you
+
+[AGENT]: I'll connect you to our patient support team so they can help you schedule your appointment. Please stay on the line. Connecting you to a representative. Please wait.
+
+[PATIENT]: Okay, thanks
+
+[AGENT]: Hello. You've reached the Pretty Good AI test line. Goodbye.
+
+[PATIENT]: Wait, I thought I was being transferred to a patient support team?
+
+[PATIENT]: Sorry, are you still there?
+
